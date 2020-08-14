@@ -3,14 +3,88 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "uni-app"
+				"navigationBarTitleText": "uni-app",
+				"app-plus":{
+					"titleNView":false
+				}
 			}
 		}
-	],
+	    ,{
+            "path" : "pages/store/store",
+            "style" : {
+				"app-plus":{
+					"titleNView":false
+				}
+			}
+        }
+        ,{
+            "path" : "pages/mine/mine",
+            "style" : {
+				"app-plus":{
+					"titleNView":false
+				}
+			}
+        }
+        ,{
+            "path" : "pages/menu/menu",
+            "style" : {
+				"app-plus":{
+					"titleNView":false
+				}
+			}
+        }
+        ,{
+            "path" : "pages/more/more",
+            "style" : {
+				"app-plus":{
+					"titleNView":false
+				}
+			}
+        }
+    ],
 	"globalStyle": {
-		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
-		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8"
+		// "navigationBarTextStyle": "black",
+		// "navigationBarTitleText": "uni-app",
+		// "navigationBarBackgroundColor": "#F8F8F8",
+		// "backgroundColor": "#F8F8F8"
+		
+	},
+	//底部导航栏
+	"tabBar":{
+		"color":"#333333",
+		"selectedColor":"#008a62",
+		"spacing":"6px",
+		"list":[
+			{
+				"pagePath":"pages/index/index",
+				"text":"主页",
+				"iconPath":"static/picture/main.png",
+				"selectedIconPath":"static/picture/main-active.png"
+			},
+			{
+				"pagePath":"pages/store/store",
+				"text":"门店",
+				"iconPath":"static/picture/store.png",
+				"selectedIconPath":"static/picture/store-active.png"
+			},
+			{
+				"pagePath":"pages/mine/mine",
+				"text":"我的账户",
+				"iconPath":"static/picture/mine.png",
+				"selectedIconPath":"static/picture/mine-active.png"
+			},
+			{
+				"pagePath":"pages/menu/menu",
+				"text":"菜单",
+				"iconPath":"static/picture/menu.png",
+				"selectedIconPath":"static/picture/menu-active.png"
+			},
+			{
+				"pagePath":"pages/more/more",
+				"text":"更多",
+				"iconPath":"static/picture/more.png",
+				"selectedIconPath":"static/picture/more-active.png"
+			}
+		]
 	}
 }
