@@ -41,6 +41,10 @@
 				}
 			}
         }
+        ,{
+            "path" : "components/login/login",
+            "style" : {}
+        }
     ],
 	"globalStyle": {
 		// "navigationBarTextStyle": "black",
