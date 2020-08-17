@@ -12,12 +12,16 @@
 			</view>
 		 </view>
 		 <!-- 占位区域 -->
-		 <Login></Login>
+		 <Login class='one' style='display: none;'></Login>
+		 <Register class='two' style='display: none;'></Register>
+		 <About class='three'></About>
 	</view>
 </template>
 
 <script>
+	import Register from '../../components/register/register'
 	import Login from '../../components/login/login'
+	import About from '../../components/about/about'
 	var btn = document.getElementsByClassName('login');
 	export default {
 		data() {
@@ -26,7 +30,9 @@
 			};
 		},
 		components:{
-			Login
+			Login,
+			Register,
+			About
 		},
 		methods:{
 			loginHandel(){

@@ -45,6 +45,14 @@
             "path" : "components/login/login",
             "style" : {}
         }
+        ,{
+            "path" : "components/register/register",
+            "style" : {}
+        }
+        ,{
+            "path" : "components/about/about",
+            "style" : {}
+        }
     ],
 	"globalStyle": {
 		// "navigationBarTextStyle": "black",
