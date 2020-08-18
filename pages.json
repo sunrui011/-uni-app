@@ -43,15 +43,27 @@
         }
         ,{
             "path" : "components/login/login",
-            "style" : {}
+            "style" : {
+				"app-plus":{
+					"titleNView":false
+				}
+			}
         }
         ,{
             "path" : "components/register/register",
-            "style" : {}
+            "style" : {
+				"app-plus":{
+					"titleNView":false
+				}
+			}
         }
         ,{
             "path" : "components/about/about",
-            "style" : {}
+            "style" : {
+				"app-plus":{
+					"titleNView":false
+				}
+			}
         }
     ],
 	"globalStyle": {

@@ -22,7 +22,6 @@
 	import Register from '../../components/register/register'
 	import Login from '../../components/login/login'
 	import About from '../../components/about/about'
-	var btn = document.getElementsByClassName('login');
 	export default {
 		data() {
 			return {
