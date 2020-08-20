@@ -6,15 +6,15 @@
 		 		登录或创建一个新帐户 🌟
 		 	</view>
 			<view class="login-line">
-				<text class="login" @click="loginHandel()">登录</text>
-				<text class="resgister">注册</text>
-				<text class="about">关于星享俱乐部</text>
+				<text :class="{login:isLogin}" @click="loginHandel()">登录</text>
+				<text @click="registerHandel()" :class="{register:isResgister}">注册</text>
+				<text :class="{about:isAbout}" @click="aboutHandel()">关于星享俱乐部</text>
 			</view>
 		 </view>
 		 <!-- 占位区域 -->
-		 <Login class='one' style='display: none;'></Login>
-		 <Register class='two' style='display: none;'></Register>
-		 <About class='three'></About>
+		 <Login :class="{textLogin:istextLogin,noneLogin:isnoneLogin}"></Login>
+		 <Register :class='{textRegister:istextRegister,noneRegister:isnoneRegister}'></Register>
+		 <About :class='{textAbout:istextAbout,noneAbout:isnoneAbout}'></About>
 	</view>
 </template>
 
@@ -25,7 +25,17 @@
 	export default {
 		data() {
 			return {
-			
+			   isLogin:true,
+			   isResgister:false,
+			   isAbout:false,
+			   
+			   istextLogin:true,
+			   istextRegister:false,
+			   istextAbout:false,
+			   
+			   isnoneLogin:false,
+			   isnoneRegister:true,
+			   isnoneAbout:true
 			};
 		},
 		components:{
@@ -33,14 +43,41 @@
 			Register,
 			About
 		},
+		onLoad() {
+			this.istextLogin = true
+		},
 		methods:{
 			loginHandel(){
-				var ast = document.getElementsByClassName('login')
-				ast[0].style.fontWeight = 700
-				ast[0].style.color = rgba(0,0,0)   
-			}
+				this.isResgister = false
+				this.isAbout = false
+				this.isLogin = true
+				this.istextLogin = true
+				this.isnoneLogin = false
+				this.isnoneAbout = true
+				this.isnoneRegister = true
+				
+			},
+			registerHandel(){
+				this.isResgister = true
+				this.isAbout = false
+				this.isLogin = false
+				this.isnoneRegister = false
+				this.istextLogin = false
+				this.isnoneLogin = true
+				this.isnoneAbout = true
+			},
+			aboutHandel(){
+				this.isResgister = false
+				this.isAbout = true
+				this.isLogin = false
+				this.isnoneRegister = true
+				this.isnoneAbout = false
+				this.istextAbout = true
+				this.istextLogin = false
 		}
-	}
+	},
+}
+	
 </script>
 
 <style lang="scss">
@@ -61,7 +98,34 @@
 			}
 	}
 }
-.login-active {
-	color: red;
+.login {
+	color: #000;
+	font-weight: 900;
+}
+.register {
+	color: #000;
+	font-weight: 900;
+}
+.about {
+	color: #000;
+	font-weight: 900;
+}
+.textLogin {
+	display: block;
+}
+.textRegister {
+	display: block;
+}
+.textAbout {
+	display: block;
+}
+.noneLogin {
+	display: none;
+}
+.noneRegister {
+	display: none;
+}
+.noneAbout {
+	display: none;
 }
 </style>
